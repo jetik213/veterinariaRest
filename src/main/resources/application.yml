@@ -1,0 +1,22 @@
+application:
+  title: Veterinaria
+  version: 1.0
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://jetik.mysql.database.azure.com:3306/veterinaria?useSSL=true&requireSSL=false
+    username: jeffrey
+    password: I202120312.
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:bd/tablas.sql
+      data-locations: classpath:bd/data.sql
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
